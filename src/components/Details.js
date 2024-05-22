@@ -18,6 +18,7 @@ const Details = ({ details }) => {
   const convertMilliontoBillion = (number) => {
     return (number / 1000).toFixed(2);
   };
+  
   return (
     <Card>
       <ul
