@@ -53,11 +53,27 @@ export const mockStockQuote = {
 };
 
 export const mockHistoricalData = {
-  c: [217.68, 221.03, 219.89],
-  h: [222.49, 221.5, 220.94],
-  l: [217.19, 217.1402, 218.83],
-  o: [221.03, 218.55, 220],
-  s: "ok",
-  t: [1569297600, 1569384000, 1569470400],
-  v: [33463820, 24018876, 20730608],
+  "Meta Data": {
+    "1. Information": "Daily Prices (open, high, low, close) and Volumes",
+    "2. Symbol": "IBM",
+    "3. Last Refreshed": "2024-05-22",
+    "4. Output Size": "Compact",
+    "5. Time Zone": "US/Eastern",
+  },
+  "Time Series (Daily)": {
+    "2024-05-22": {
+      "1. open": "173.3900",
+      "2. high": "174.9900",
+      "3. low": "172.7600",
+      "4. close": "173.6900",
+      "5. volume": "3294900",
+    },
+    "2024-05-21": {
+      "1. open": "169.9400",
+      "2. high": "174.9700",
+      "3. low": "169.9400",
+      "4. close": "173.4700",
+      "5. volume": "6459800",
+    },
+  },
 };
