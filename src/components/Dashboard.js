@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Header from "./Header";
 import Details from "./Details";
 import Overview from "./Overview";
-import Chart from "./Chart";
+import Chart from "./chart/Chart";
 import ThemeContext from "../context/ThemeContext";
 import StockContext from "../context/StockContext";
 import { fetchQuote, fetchStockDetails } from "../api/stock-api";

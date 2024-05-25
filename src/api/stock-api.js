@@ -44,17 +44,16 @@ export const fetchHistoricalData = async (stockSymbol, filter) => {
       filterVal = "TIME_SERIES_INTRADAY";
       break;
     case "1W":
-      filterVal = "TIME_SERIES_DAILY_ADJUSTED";
+      filterVal = "TIME_SERIES_DAILY";
       break;
     case "1M":
       filterVal = "TIME_SERIES_WEEKLY_ADJUSTED";
       break;
     default:
-      filterVal = "TIME_SERIES_DAILY_ADJUSTED";
+      filterVal = "TIME_SERIES_DAILY";
       break;
   }
-
-  const url = `${candlePath}/query?function=${filterVal}&symbol=${stockSymbol}&apikey=${process.env.ALPHA_VANTAGE_API_KEY}`;
+  const url = `${candlePath}/query?function=${filterVal}&symbol=${stockSymbol}&interval=60min&apikey=${process.env.ALPHA_VANTAGE_API_KEY}`;
   const response = await fetch(url);
 
   if (!response.ok) {

@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 import SearchResults from "./SearchResults";
-import ThemeContext from "../context/ThemeContext";
-import { searchSymbol } from "../api/stock-api";
+import ThemeContext from "../../context/ThemeContext";
+import { searchSymbol } from "../../api/stock-api";
 
 const Search = () => {
   const { darkMode } = useContext(ThemeContext);

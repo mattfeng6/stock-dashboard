@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
+import Card from "../Card";
 import ChartFilter from "./ChartFilter";
-import Card from "./Card";
 import ReactApexChart from "react-apexcharts";
-import { chartConfig } from "../constants/config";
-import StockContext from "../context/StockContext";
-import { fetchHistoricalData } from "../api/stock-api";
-import { candleStickOptions } from "../constants/config";
+import { chartConfig } from "../../constants/config";
+import StockContext from "../../context/StockContext";
+import { fetchHistoricalData } from "../../api/stock-api";
+import { candleStickOptions } from "../../constants/config";
 
 const Chart = () => {
   const { stockSymbol } = useContext(StockContext);
@@ -17,12 +17,14 @@ const Chart = () => {
     let filterVal = "";
     switch (filter) {
       case "1D":
-        filterVal = "Time Series (5min)";
+        filterVal = "Time Series (60min)";
         break;
       case "1W":
         filterVal = "Time Series (Daily)";
+        break;
       case "1M":
         filterVal = "Weekly Adjusted Time Series";
+        break;
       default:
         filterVal = "Time Series (Daily)";
         break;
